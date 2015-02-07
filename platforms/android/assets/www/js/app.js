@@ -7,6 +7,26 @@
 angular.module('starter', ['ionic', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
+  document.addEventListener('deviceready', function(e){
+    console.log('deviceready');
+    console.log(angular.toJson(e));
+  }, false);
+  document.addEventListener('onPluginsReady', function(e){
+    console.log('onPluginsReady');
+    console.log(angular.toJson(e));
+  }, false);
+  document.addEventListener('onCordovaReady', function(e){
+    console.log('onCordovaReady');
+    console.log(angular.toJson(e));
+  }, false);
+  document.addEventListener('onCordovaConnectionReady', function(e){
+    console.log('onCordovaConnectionReady');
+    console.log(angular.onCordovaConnectionReady(e));
+  }, false);
+  document.addEventListener('onCordovaInfoReady', function(e){
+    console.log('onCordovaInfoReady');
+    console.log(angular.onCordovaConnectionReady(e));
+  }, false);
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
