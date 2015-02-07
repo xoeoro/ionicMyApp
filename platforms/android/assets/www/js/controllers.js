@@ -40,20 +40,20 @@ angular.module('starter.controllers', [])
       if(typeof SocialVk == 'function') {
         SocialVk().share('http://ukr.net', 'comment', 'http://img.youtube.com/vi/qQiEvw3JkA4/0.jpg', function(success){
           console.log('success');
-          console.info(angular.toJson(success));
+          console.info(JSON.stringify(success));
         }, function(error) {
           console.log('error');
-          console.error(angular.toJson(error));
+          console.error(JSON.stringify(error));
         });
       } else {
         console.log('typeof SocialVk.share');
         console.log(typeof SocialVk.share);
         SocialVk.share('http://ukr.net', 'comment', 'http://img.youtube.com/vi/qQiEvw3JkA4/0.jpg', function(success){
           console.log('success');
-          console.info(angular.toJson(success));
+          console.info(JSON.stringify(success));
         }, function(error) {
           console.log('error');
-          console.error(angular.toJson(error));
+          console.error(JSON.stringify(error));
         });
       }
       
