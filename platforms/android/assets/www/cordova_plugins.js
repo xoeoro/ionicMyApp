@@ -27,6 +27,13 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
+    },
+    {
+        "file": "plugins/com.ionic.keyboard/www/keyboard.js",
+        "id": "com.ionic.keyboard.keyboard",
+        "clobbers": [
+            "cordova.plugins.Keyboard"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -35,7 +42,8 @@ module.exports.metadata =
     "org.apache.cordova.console": "0.2.12",
     "org.apache.cordova.device": "0.2.13",
     "ru.trilan.cordova-social-vk": "1.0.0",
-    "org.apache.cordova.dialogs": "0.2.11"
+    "org.apache.cordova.dialogs": "0.2.11",
+    "com.ionic.keyboard": "1.0.3"
 }
 // BOTTOM OF METADATA
 });
