@@ -75,24 +75,3 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
 });
-
-document.addEventListener('deviceready', function(e){
-  console.log('deviceready');
-  console.log(angular.toJson(e));
-}, false);
-document.addEventListener('onPluginsReady', function(e){
-  console.log('onPluginsReady');
-  console.log(angular.toJson(e));
-}, false);
-document.addEventListener('onCordovaReady', function(e){
-  console.log('onCordovaReady');
-  console.log(angular.toJson(e));
-}, false);
-document.addEventListener('onCordovaConnectionReady', function(e){
-  console.log('onCordovaConnectionReady');
-  console.log(angular.onCordovaConnectionReady(e));
-}, false);
-document.addEventListener('onCordovaInfoReady', function(e){
-  console.log('onCordovaInfoReady');
-  console.log(angular.onCordovaConnectionReady(e));
-}, false);
