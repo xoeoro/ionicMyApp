@@ -33,17 +33,21 @@ angular.module('starter.controllers', [])
   };
 
   $scope.share = function() {
-    alert('share');
-    alert(typeof SocialVk);
-    alert(typeof SocialVk.share);
-    SocialVk.share('http://ukr.net', 'comment', 'http://img.youtube.com/vi/qQiEvw3JkA4/0.jpg', function(success){
-      alert('success');
-      alert(angular.toJson(success));
-    }, function(error) {
-      alert('error');
-      alert(angular.toJson(error));
-    });
-    alert('after call share');
+    console.debug('share');
+    console.log('typeof window.SocialVk');
+    console.log(typeof window.window.SocialVk);
+    if(typeof window.SocialVk != 'undefined') {
+      console.log('typeof window.SocialVk.share');
+      console.log(typeof window.SocialVk.share);
+      window.SocialVk.share('http://ukr.net', 'comment', 'http://img.youtube.com/vi/qQiEvw3JkA4/0.jpg', function(success){
+        console.log('success');
+        console.info(angular.toJson(success));
+      }, function(error) {
+        console.log('error');
+        console.error(angular.toJson(error));
+      });
+    }
+    console.log('after call share');
   }
 })
 
