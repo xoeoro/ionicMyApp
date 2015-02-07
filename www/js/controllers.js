@@ -33,7 +33,10 @@ angular.module('starter.controllers', [])
   };
 
   $scope.share = function() {
+
+
     console.debug('share');
+
     console.log('typeof window.SocialVk');
     console.log(typeof window.window.SocialVk);
     if(typeof window.SocialVk != 'undefined') {
