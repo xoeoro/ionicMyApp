@@ -33,17 +33,17 @@ angular.module('starter.controllers', [])
   };
 
   $scope.share = function() {
-    console.debug('share');
-    console.log(typeof SocialVk);
-    console.log(typeof SocialVk.share);
+    alert('share');
+    alert(typeof SocialVk);
+    alert(typeof SocialVk.share);
     SocialVk.share('http://ukr.net', 'comment', 'http://img.youtube.com/vi/qQiEvw3JkA4/0.jpg', function(success){
-      console.log('success');
-      console.info(angular.toJson(success));
+      alert('success');
+      alert(angular.toJson(success));
     }, function(error) {
-      console.log('error');
-      console.error(angular.toJson(error));
+      alert('error');
+      alert(angular.toJson(error));
     });
-    console.log('after call share');
+    alert('after call share');
   }
 })
 
